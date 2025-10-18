@@ -12,6 +12,9 @@ import {
   SidebarMenuBadge,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubButton,
+  SidebarMenuSubItem,
   SidebarSeparator,
 } from "./ui/sidebar";
 import {
@@ -160,6 +163,30 @@ const AppSidebar = () => {
             </CollapsibleContent>
           </SidebarGroup>
         </Collapsible>
+        {/* NESTED */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Nested items</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <Link href="/">
+                    <Projector /> See all project
+                  </Link>
+                </SidebarMenuButton>
+                <SidebarMenuSub>
+                  <SidebarMenuSubItem>
+                    <SidebarMenuSubButton asChild>
+                      <Link href="/">
+                        <Plus></Plus>Add Project
+                      </Link>
+                    </SidebarMenuSubButton>
+                  </SidebarMenuSubItem>
+                </SidebarMenuSub>
+              </SidebarMenuItem>
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenuItem>
