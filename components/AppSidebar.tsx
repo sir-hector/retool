@@ -79,7 +79,12 @@ const AppSidebar = () => {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/">
-                <Image src="" alt="logo" width={20} height={20} />
+                <Image
+                  src="https://images.pexels.com/photos/2004161/pexels-photo-2004161.jpeg"
+                  alt="logo"
+                  width={20}
+                  height={20}
+                />
                 <span>Fair backoffice</span>
               </Link>
             </SidebarMenuButton>
