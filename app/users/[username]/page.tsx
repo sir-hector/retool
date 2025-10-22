@@ -7,6 +7,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import { SlashIcon } from "lucide-react";
 
 const SingleUserPage = () => {
@@ -36,7 +41,17 @@ const SingleUserPage = () => {
         {/* LEFT */}
         <div className="w-full xl:w-1/3 space-y-6">
           {/* USER BADGES CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg">Badge</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="text-xl font-semibold">User Badges</h1>
+            <div className="flex gap-4 mt-4">
+              <HoverCard>
+                <HoverCardTrigger>Hover</HoverCardTrigger>
+                <HoverCardContent>
+                  The React Framework – created and maintained by @vercel.
+                </HoverCardContent>
+              </HoverCard>
+            </div>
+          </div>
           {/* INFORMATION CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">Info</div>
           {/* CARD LIST */}
