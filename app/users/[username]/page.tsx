@@ -12,7 +12,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import { SlashIcon } from "lucide-react";
+import { BadgeCheck, Candy, SlashIcon } from "lucide-react";
 
 const SingleUserPage = () => {
   return (
@@ -45,9 +45,31 @@ const SingleUserPage = () => {
             <h1 className="text-xl font-semibold">User Badges</h1>
             <div className="flex gap-4 mt-4">
               <HoverCard>
-                <HoverCardTrigger>Hover</HoverCardTrigger>
+                <HoverCardTrigger>
+                  <BadgeCheck
+                    size={36}
+                    className="rounded-full bg-blue-500/30 border-1 border-blue-500 p-2"
+                  />
+                </HoverCardTrigger>
                 <HoverCardContent>
-                  The React Framework – created and maintained by @vercel.
+                  <h1 className="font-bold mb-2">Verified User</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This user has been verified by the admin
+                  </p>
+                </HoverCardContent>
+              </HoverCard>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Candy
+                    size={36}
+                    className="rounded-full bg-blue-500/30 border-1 border-blue-500 p-2"
+                  />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <h1 className="font-bold mb-2">Verified User</h1>
+                  <p className="text-sm text-muted-foreground">
+                    This user has been verified by the admin
+                  </p>
                 </HoverCardContent>
               </HoverCard>
             </div>
