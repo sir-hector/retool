@@ -1,4 +1,5 @@
 import CardList from "@/components/CardList";
+import { Badge } from "@/components/ui/badge";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -12,6 +13,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { Progress } from "@/components/ui/progress";
 import { BadgeCheck, Candy, SlashIcon } from "lucide-react";
 
 const SingleUserPage = () => {
@@ -75,7 +77,32 @@ const SingleUserPage = () => {
             </div>
           </div>
           {/* INFORMATION CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg">Info</div>
+          <div className="bg-primary-foreground p-4 rounded-lg">
+            <h1 className="font-semibold text-xl">User Information</h1>
+            <div className="space-y-4 mt-4">
+              <div className="flex flex-col gap-2 mb-8">
+                <p className="text-muted-foreground text-sm">
+                  Profile completion
+                </p>
+                <Progress value={66} />
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">Username:</span>
+                  <span className="">John.doe</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">Email:</span>
+                  <span className="">John.doe@gmail.com</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="font-bold">Role:</span>
+                  <Badge>Admin</Badge>
+                </div>
+              </div>
+              <p className="text-muted-foreground text-sm mt-4">
+                Joined on 25.02.2023
+              </p>
+            </div>
+          </div>
           {/* CARD LIST */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <CardList title="Recent Transactions" />
