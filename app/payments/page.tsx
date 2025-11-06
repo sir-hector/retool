@@ -7,14 +7,14 @@ const getData = async (): Promise<Payment[]> => {
       id: "728ed52f",
       amount: 100,
       status: "pending",
-      email: "m@example.com",
+      email: "s@example.com",
       username: "John Doe",
     },
     {
       id: "728ed522",
       amount: 100,
       status: "success",
-      email: "m@example.com",
+      email: "x@example.com",
       username: "John Doe",
     },
     {
